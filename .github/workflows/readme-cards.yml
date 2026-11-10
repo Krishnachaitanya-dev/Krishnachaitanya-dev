@@ -1,0 +1,35 @@
+name: Refresh README cards
+
+on:
+  schedule:
+    - cron: "30 1 * * *" # 07:00 IST every day
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch contribution calendar
+        run: python3 scripts/fetch_contributions.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Render README cards (hero, graph, activity, tiles, work)
+        run: python3 scripts/render_readme_cards.py
+
+      - name: Commit refreshed cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/contributions.json cards
+          if git diff --cached --quiet; then
+            echo "Cards unchanged"
+          else
+            git commit -m "Refresh README cards"
+            git push
+          fi

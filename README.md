@@ -1,24 +1,19 @@
-# 💫 About Me:
-👩‍💼 Exploring new job opportunities while delving into an in-depth data science course.<br>📚 Currently learning advanced data science concepts.<br>🤝 Open to collaborating on data science projects.<br>🔍 Seeking assistance with navigating the job search process in data science.<br>💬 Feel free to ask me about my AI/ML projects or job search tips!<br>🎮 Fun fact: I enjoy playing BGMI in my free time!
+<a href="https://www.linkedin.com/in/krishnachaitanyadoppa/"><img src="./cards/hero.svg" width="100%" alt="Krishna Chaitanya Doppa, Technical Project Manager. Web, mobile and SaaS products, from requirements to release. Senior Project Manager at The Business Wings." /></a>
 
+<img src="./cards/graph.svg" width="100%" alt="My GitHub contribution graph for the last year. Most of my work is in private client repositories." />
 
-## 🌐 Socials:
-[![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/https://discord.gg/87FTU2dhTM) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/d-krishnachaitanya/) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://twitter.com/Krishhh1999) 
+<img src="./cards/activity.svg" width="100%" alt="Contributions per month for the last 12 months, with my busiest week, longest streak, active days and busiest day." />
 
-# 💻 Tech Stack:
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Krishnachaitanya-dev&theme=slateorange&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=Krishnachaitanya-dev&theme=slateorange&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Krishnachaitanya-dev&theme=slateorange&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+<a href="https://www.linkedin.com/in/krishnachaitanyadoppa/"><img src="./cards/tile-requirements.svg" width="32.5%" alt="15 client requirements traced to evidence in one audit for a retail pricing system." /></a>
+<a href="https://www.linkedin.com/in/krishnachaitanyadoppa/"><img src="./cards/tile-testing.svg" width="32.5%" alt="237 automated tests plus 22 live acceptance checks on a 3,104-product catalogue." /></a>
+<a href="https://www.linkedin.com/in/krishnachaitanyadoppa/"><img src="./cards/tile-delivery.svg" width="32.5%" alt="5 years shipping client software: web, mobile and SaaS, from the first call to release." /></a>
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+<img src="./cards/work.svg" width="100%" alt="Where I work: Senior Project Manager at The Business Wings; freelance technical project manager and developer for EnValues and direct clients; Technical Project Lead at AISMARTLIVE Solutions." />
 
-### 😂 Random Dev Meme
-<img src='https://randommeme-five.vercel.app/' style="height: 400px;"/>
+<p align="center">
+  <a href="https://www.linkedin.com/in/krishnachaitanyadoppa/">LinkedIn</a> ·
+  <a href="https://play.google.com/store/apps/details?id=com.advancewashing.app">Advance Washing on Google Play</a> ·
+  <a href="https://apps.apple.com/in/app/advancewashing/id6755901812">Advance Washing on the App Store</a>
+</p>
 
----
-[![](https://visitcount.itsvg.in/api?id=Krishnachaitanya-dev&icon=0&color=0)](https://visitcount.itsvg.in)
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+<sub>The cards above are SVGs drawn by <code>scripts/render_readme_cards.py</code> from my contribution calendar and redrawn every morning by a GitHub Action.</sub>
