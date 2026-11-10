@@ -16,7 +16,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # light -> dark; dark pixels get dense glyphs because the card prints ink on paper
 RAMP = " .:-=+*#%@"
 WHITE, BLACK, GAMMA = 205.0, 25.0, 1.15
-CHAR_ASPECT = 0.602 / 0.885  # mono advance / line height used by render_readme_cards.py
+CHAR_ASPECT = 0.6 / 0.9  # Geist Mono advance / line height used by render_readme_cards.py
+CROP = (0.06, 0.07, 0.94, 0.97)  # head and shoulders, as fractions of the photo
+FADE = 0.25  # bottom share of rows that fades out
+SIDE_FADE = 0.14  # share of columns on each side that fades out
 
 
 def cut_out(img: np.ndarray) -> np.ndarray:
@@ -44,8 +47,17 @@ def to_ascii(path: str, cols: int) -> list[str]:
     ink = np.maximum(np.maximum(tone, np.clip(edges, 0, 0.45)), 0.1) * alpha  # background stays blank
 
     h, w = ink.shape
+    x0, y0, x1, y1 = (int(CROP[0] * w), int(CROP[1] * h), int(CROP[2] * w), int(CROP[3] * h))
+    ink = ink[y0:y1, x0:x1]
+    h, w = ink.shape
     rows = round(cols * (h / w) * CHAR_ASPECT)
     small = cv2.resize(ink, (cols, rows), interpolation=cv2.INTER_AREA)
+    fade_rows = int(rows * FADE)
+    if fade_rows:
+        small[-fade_rows:] *= np.linspace(1, 0, fade_rows)[:, None]
+    edge = max(1, int(cols * SIDE_FADE))
+    ramp = np.minimum(1, np.minimum(np.arange(cols), np.arange(cols)[::-1]) / edge)
+    small *= ramp[None, :]  # shoulders fade out instead of ending at a hard edge
     idx = (np.clip(small, 0, 1) * (len(RAMP) - 1)).round().astype(int)
     lines = ["".join(RAMP[i] for i in row).rstrip() for row in idx]
     while lines and not lines[0].strip():
@@ -57,19 +69,19 @@ def to_ascii(path: str, cols: int) -> list[str]:
 
 def preview(lines: list[str], out: str) -> None:
     font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 10)
-    cw, lh = 6.02, 8.85
+    cw, lh = 6.0, 9.0
     width = int(max(map(len, lines)) * cw) + 20
-    im = Image.new("RGB", (width, int(len(lines) * lh) + 20), "#F4F7F5")
+    im = Image.new("RGB", (width, int(len(lines) * lh) + 20), "#f3f3f1")
     d = ImageDraw.Draw(im)
     for i, line in enumerate(lines):
-        d.text((10, 10 + i * lh), line, fill="#0E3B43", font=font)
+        d.text((10, 10 + i * lh), line, fill="#111111", font=font)
     im.save(out)
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("photo")
-    ap.add_argument("--cols", type=int, default=100)
+    ap.add_argument("--cols", type=int, default=120)
     ap.add_argument("--preview")
     a = ap.parse_args()
     art = to_ascii(a.photo, a.cols)
