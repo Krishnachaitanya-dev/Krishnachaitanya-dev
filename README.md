@@ -11,5 +11,5 @@
 </div>
 
 <p align="center">
-<a href="https://www.linkedin.com/in/krishnachaitanyadoppa/">linkedin</a> &nbsp;/&nbsp; <a href="https://play.google.com/store/apps/details?id=com.advancewashing.app">google play</a> &nbsp;/&nbsp; <a href="https://apps.apple.com/in/app/advancewashing/id6755901812">app store</a>
+<a href="https://www.linkedin.com/in/krishnachaitanyadoppa/">linkedin</a> &nbsp;/&nbsp; <a href="https://x.com/Krishhh1999">x</a> &nbsp;/&nbsp; <a href="https://play.google.com/store/apps/details?id=com.advancewashing.app">google play</a> &nbsp;/&nbsp; <a href="https://apps.apple.com/in/app/advancewashing/id6755901812">app store</a>
 </p>
